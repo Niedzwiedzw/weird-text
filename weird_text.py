@@ -65,7 +65,7 @@ class WeirdText:
         :param text: a full string containing a "---weird---" wrapping
         :return: decoded text
         """
-        decoder = WeirdText()
+        decoder = cls()
         encoded, keys = cls._get_text(text)
         decoder.encoded_words = [key.strip() for key in keys.split(' ')]
         words = encoded.split(' ')
